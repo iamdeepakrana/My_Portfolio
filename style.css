@@ -1,94 +1,300 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Fira+Sans&display=swap');
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    position: relative;
-
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+body{
+    background: #202036;
+    color: antiquewhite;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background:transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 }
 .logo{
-    width: 20vw;
-    height: 30%;
-}
-.hero{
     position: relative;
+    font-size: 25px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;
+}
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0;
     width: 100%;
-    height: 100vh;
-
-}
-nav{
-    display: flex;
-    width: 84%;
-    margin: auto;
-    padding: 20px 0;
-    align-items: center;
-    justify-content: space-between;
-
-}
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-    
-}
-nav ul li a{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    }
-    .detail{
-        margin-left: 8%;
-        margin-top: 8%;
-
-    }
-    .detail h1{
-        font-size: 50px;
-        color: black;
-        margin-bottom: 20px;
-    }
-span{
-    color: orange;
-
-}
-    .detail p{
-        color: green;
-        line-height: 22px;
-        }
-.detail a{
-    background: #212121;
-    padding:10px 18px;
-    text-decoration: none;
-    font-weight: bold;
-    color: White;
-    display: inline-block;
-    margin :30px 0;
-    border-radius: 5px;
-}
-.bg{
-    width: auto;
-    height: auto;
-    background-image:none;
-}
-.images{
-    width: 45%;
-    height: 80%;
-    position: absolute;
-    bottom: 0;
-    right: 100px;
-
-}
-.images img{
     height: 100%;
+    background: rgb(12, 8, 8);
+    animation: showRight 3s ease forwards;
+    animation-delay: .4s;
+}
+.navbar a {
+    font-size: 18px;
+    color: antiquewhite;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.6s;
+}
+
+.navbar a:hover,
+.navbar a:active
+{
+    color: aqua;
+}
+
+.home{
+    height: 100vh;
+    background: url('https://media.istockphoto.com/id/929063744/photo/portrait-of-handsome-man-against-black-background.jpg?b=1&s=170667a&w=0&k=20&c=i91lzwpYIdYojv4MbMjDlr7tlqEoR8Nmv9axixp1Jrw=') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+.home-content{
+    /* background: yellowgreen; */
+    max-width: 600px;
+}
+
+.home-content h1 {
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.home-content h1::before{
+    content: '';
     position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    transition: bottom 1s, left 1s;
-    }
-.images:hover .shape{
-    bottom: 40px;
+    top: 0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background: rgb(12, 8, 8);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+.home-content h3{
+    font-size: 32px;
+    position: relative;
+    font-weight: 700;
+    color: blue;
+} 
+
+.home-content h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background: rgb(12, 8, 8);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.3s;
+}
+.home-content p{
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
 
 }
-.images:hover .boy{
-    left: 45%;
+
+.home-content p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background: rgb(12, 8, 8);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.6s;
+}
+.home-content .btn-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+    /* background: yellowgreen; */
+}
+
+.home-content .btn-box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background: rgb(5, 4, 4);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.9s;
+    z-index: 2;
+}
+
+.btn-box a{ 
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    background: blue;
+    border: 2px solid blue;
+    border-radius: 8px;
+    font-size: 19px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+.btn-box a:hover {
+    color: rgb(22, 22, 36);
+}
+.btn-box a:nth-child(2){
+    /* background: transparent; */
+    background: transparent;
+    color: rgb(171, 171, 201);
+}
+.btn-box a:nth-child(2):hover{
+    background: rgb(31, 31, 224);
+}
+.btn-box a:nth-child(2)::before{
+    color: #080816;
+
+}
+
+.btn-box a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: rgb(14, 33, 179);
+    z-index: -1;
+    transition: .5s;
+}
+.btn-box a:hover::before{
+    width: 100%;
+}
+
+.home-sci{
+    position: absolute;
+    bottom: 40px;
+    width: 200px;
+    /* background: red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.home-sci::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background: rgb(5, 4, 4);
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.5s;
+    z-index: 2;
+}
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 50%;
+    font-size: 20px;
+    color: blue;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.home-sci a:hover{
+color: rgb(20, 20, 31);
+}
+.home-sci a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(38, 16, 233);
+    z-index: -1;
+    transition: 1s;
+}
+
+.home-sci a:hover::before{
+    width: 100%;
+
+}
+
+.home-imgHover{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 600px;
+    height: 100%;
+    background: transparent;
+    /* border: 2px solid red; */
+    transition: 3s;
+    animation: manipActiveHover .1s forwards;
+    animation-delay: 4s;
+    pointer-events: none;
+}
+
+.home-imgHover:hover{
+    background: rgb(24, 28, 36);
+    opacity: .8;
+}
+
+.home-imgHover::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0;
+    width: 105%;
+    height: 100%;
+    background: rgb(8, 8, 8);
+    animation: showRight 1s ease forwards;
+    animation-delay: 3s;
+    z-index: 100;
+}
+
+/* KEYFRAMES ANIMATION */
+@keyframes showRight{
+    100%{
+        width: 0;
+        
+    }
+}
+
+@keyframes manipActiveHover{
+    100%{
+        pointer-events: auto;
+    }
 }
